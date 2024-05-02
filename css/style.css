@@ -53,7 +53,14 @@ body{
   color: #000108;
   border-radius: 5px;
   cursor: pointer;
+  
 }
+.drag-area button:hover{
+    
+        background-color: rgb(3, 2, 44);
+        color: rgb(248, 247, 250);
+}
+
 .drag-area img{
   height: 100%;
   width: 100%;
