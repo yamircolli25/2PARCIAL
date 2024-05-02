@@ -10,10 +10,10 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #5256ad;
+  background: #373541;
 }
 .drag-area{
-  border: 2px dashed #fff;
+  border: 2px dashed #11022f;
   height: 500px;
   width: 700px;
   border-radius: 5px;
@@ -21,7 +21,10 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+    background-color: rgb(101, 102, 126);
+  }
+  
+
 .drag-area.active{
   border: 2px solid #fff;
 }
@@ -46,8 +49,8 @@ body{
   font-weight: 500;
   border: none;
   outline: none;
-  background: #fff;
-  color: #5256ad;
+  background: #d9c8fa;
+  color: #000108;
   border-radius: 5px;
   cursor: pointer;
 }
