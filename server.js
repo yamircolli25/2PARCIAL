@@ -6,6 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+//midleware 
+app.use(express.static('public'));
 
 // Definir la ruta principal
 app.get('/', (req, res) => {
@@ -36,3 +38,4 @@ app.post('/upload', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
