@@ -1,69 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #413536;
-}
-.drag-area{
-  border: 2px dashed #11022f;
-  height: 500px;
-  width: 700px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(101, 102, 126);
-  }
-  
 
-.drag-area.active{
-  border: 2px solid #fff;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
-.drag-area .icon{
-  font-size: 100px;
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.drag-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.drag-area .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.drag-area header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.drag-area span {
+  font-size: 14px;
+}
+
+.drag-area input[type="file"] {
+  display: none;
+}
+
+.drag-area label {
+  background-color: #007bff;
   color: #fff;
-}
-.drag-area header{
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
-}
-.drag-area span{
-  font-size: 25px;
-  font-weight: 500;
-  color: #fff;
-  margin: 10px 0 15px 0;
-}
-.drag-area button{
-  padding: 10px 25px;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  background: #d9c8fa;
-  color: #000108;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  
-}
-.drag-area button:hover{
-    
-  background-color: rgb(3, 2, 44);
-  color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease;
 }
 
-.drag-area img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.drag-area label:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.options label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.options select {
+  padding: 8px;
   border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }

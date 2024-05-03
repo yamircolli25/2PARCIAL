@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container
+    formuploadForm(action="/upload", method="post", enctype="multipart/form-data")
+      .drag-area
+        .icon
+          i.fas.fa-cloud-upload-alt
+        header Drag & Drop to Upload File
+        span OR
+        input(type="file", name="image", id="image", accept="image/*", required)
+        label(for="image") Select an image
+      .options
+        label(for="format") Choose image format:
+        select(name="format", id="format")
+          option(value="png") PNG
+          option(value="jpg") JPG
+          option(value="jpeg") JPEG
+          option(value="svg") SVG
+          option(value="webp") WEBP
+      button(type="submit") Convert Image
