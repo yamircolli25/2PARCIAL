@@ -10,7 +10,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #373541;
+  background: #413536;
 }
 .drag-area{
   border: 2px dashed #11022f;
@@ -21,7 +21,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-    background-color: rgb(101, 102, 126);
+  background-color: rgb(101, 102, 126);
   }
   
 
@@ -57,8 +57,8 @@ body{
 }
 .drag-area button:hover{
     
-        background-color: rgb(3, 2, 44);
-        color: rgb(0, 0, 0);
+  background-color: rgb(3, 2, 44);
+  color: rgb(0, 0, 0);
 }
 
 .drag-area img{
