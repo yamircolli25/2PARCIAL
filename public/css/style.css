@@ -144,6 +144,13 @@ nav ul li a:hover {
 i {
   vertical-align: middle;
 }
+.login-box {
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  margin: 0 auto; /* Centra el cuadro en la página */
+  border: 1px solid #ccc; /* Añade un borde */
+  padding: 20px; /* Añade relleno dentro del cuadro */
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
