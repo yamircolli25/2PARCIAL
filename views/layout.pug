@@ -1,12 +1,25 @@
-//layout.pug
-
+// layout.pug
 doctype html
-html(lang="en")
+html
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Image Converter
-    link(rel="stylesheet", href="/css/style.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    title #{title}
+    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200')
   body
-    block content
+    nav
+      ul
+        li
+          a(href='/') Inicio
+        li
+          a(href='/catalogo') Productos
+        li
+          a(href='/carrito')
+            i(class='material-symbols-rounded') shopping_cart
+            span.badge= carrito.length
+        if user != ''
+          li
+            a(href='/logout')
+              i(class='material-symbols-rounded') logout
+    .container
+      block content
+
