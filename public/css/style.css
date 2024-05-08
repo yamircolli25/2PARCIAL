@@ -144,24 +144,29 @@ nav ul li a:hover {
 i {
   vertical-align: middle;
 }
+/* Estilos para el contenedor principal */
 .login-container {
   margin: 0 auto;
   max-width: 400px;
 }
 
+/* Estilos para el título */
 .title {
   text-align: center;
 }
 
+/* Estilos para los grupos de formulario */
 .form-group {
   margin-bottom: 15px;
 }
 
+/* Estilos para las etiquetas de formulario */
 .form-label {
   display: block;
   font-weight: bold;
 }
 
+/* Estilos para los campos de entrada */
 .form-input {
   width: 100%;
   padding: 10px;
@@ -169,6 +174,7 @@ i {
   border-radius: 5px;
 }
 
+/* Estilos para el botón de envío */
 .submit-button {
   width: 100%;
   padding: 10px;
@@ -179,12 +185,14 @@ i {
   cursor: pointer;
 }
 
+/* Estilos para el enlace de registro */
 .register-link {
   display: block;
   text-align: center;
   margin-top: 10px;
 }
 
+/* Estilos para el ícono de contraseña */
 .material-symbols-rounded {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -203,7 +211,7 @@ i {
   font-feature-settings: 'liga';
 }
 
-/* Opcional: Añade estilos para la clase .error si deseas estilizar los mensajes de error */
+/* Opcional: Estilos para mensajes de error */
 .error {
   color: red;
   font-weight: bold;

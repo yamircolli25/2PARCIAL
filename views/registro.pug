@@ -2,7 +2,7 @@ extends layout
 
 block content
   .registro-container
-    h1(class='title') Registro
+    h1(class='title') #{title}
 
     form(action='/registrar-usuario' method='POST' class='registro-form')
       .form-group
