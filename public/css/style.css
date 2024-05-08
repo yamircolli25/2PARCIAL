@@ -144,17 +144,21 @@ nav ul li a:hover {
 i {
   vertical-align: middle;
 }
-.login-box {
-  width: 300px; /* Ajusta el ancho según sea necesario */
-  margin: 0 auto; /* Centra el cuadro en la página */
-  border: 1px solid #ccc; /* Añade un borde */
-  padding: 20px; /* Añade relleno dentro del cuadro */
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
 }
 
+
 .login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 .form-group {
@@ -162,20 +166,25 @@ i {
   justify-content: start;
   width: 100%;
   flex-direction: column;
+  text-align: center;
+  
+  
 }
 .form-group button {
   color: white;
-  background-color: #916660;
+  background-color: #007bff;
   border-radius: 20px;
   align-self: center;
+  
 }
 .form-group button:hover {
-  background-color: #EEA5A6;
+  background-color: #2c1304;
 }
 
 #mostrarContrasena {
   width: 80px;
   align-self: flex-end;
+
 }
 
 .form-label {
@@ -187,9 +196,11 @@ i {
   width: 100%;
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #8E7AB5;
+  border: 1px solid #1619ac;
   border-radius: 20px;
   align-self: center;
+  background-color: #ebecf3;
+  
 }
 .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible {
   border: 1px solid #EEA5A6;
@@ -200,4 +211,9 @@ i {
 
 .show-password-label {
   font-size: 12px;
+}
+
+.register-link {
+  margin-top: 10px;
+  text-align: center;
 }
