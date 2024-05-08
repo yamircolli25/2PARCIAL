@@ -144,76 +144,54 @@ nav ul li a:hover {
 i {
   vertical-align: middle;
 }
-/* Estilos para el contenedor principal */
-.login-container {
-  margin: 0 auto;
-  max-width: 400px;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Estilos para el título */
-.title {
-  text-align: center;
-}
-
-/* Estilos para los grupos de formulario */
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-direction: column;
+}
+.form-group button {
+  color: white;
+  background-color: #916660;
+  border-radius: 20px;
+  align-self: center;
+}
+.form-group button:hover {
+  background-color: #EEA5A6;
 }
 
-/* Estilos para las etiquetas de formulario */
+#mostrarContrasena {
+  width: 80px;
+  align-self: flex-end;
+}
+
 .form-label {
-  display: block;
-  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
 }
 
-/* Estilos para los campos de entrada */
 .form-input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #8E7AB5;
+  border-radius: 20px;
+  align-self: center;
+}
+.form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible {
+  border: 1px solid #EEA5A6;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #EEA5A6;
 }
 
-/* Estilos para el botón de envío */
-.submit-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Estilos para el enlace de registro */
-.register-link {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Estilos para el ícono de contraseña */
-.material-symbols-rounded {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-}
-
-/* Opcional: Estilos para mensajes de error */
-.error {
-  color: red;
-  font-weight: bold;
+.show-password-label {
+  font-size: 12px;
 }
 
