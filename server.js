@@ -1,7 +1,10 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const router = require('./routes/routes');
+const sharp = require('sharp');
+const multer = require('multer');
+
+const app = express();
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
