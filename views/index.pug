@@ -21,6 +21,7 @@ block content
           option(value="webp") WEBP
       button(type="submit") Convertir Imagen
 
+
   script.
     document.addEventListener('DOMContentLoaded', function() {
       // Manejar el evento de cambio del campo de entrada de archivo
@@ -42,4 +43,5 @@ block content
           // Leer el contenido del archivo como URL de datos
           reader.readAsDataURL(file);
         }
+  
       });
