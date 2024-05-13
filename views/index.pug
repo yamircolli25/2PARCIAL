@@ -10,6 +10,7 @@ block content
         span OR
         input(type="file", name="image", id="image", accept="image/*", required)
         label(for="image") Selecciona tu imagen <!-- Etiqueta asociada al input -->
+        img#selectedImage(src="", alt="Imagen seleccionada")
       .options
         label(for="format") Elija formato de la imagen:
         select(name="format", id="format")
@@ -19,3 +20,26 @@ block content
           option(value="svg") SVG
           option(value="webp") WEBP
       button(type="submit") Convertir Imagen
+
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      // Manejar el evento de cambio del campo de entrada de archivo
+      document.getElementById('image').addEventListener('change', function() {
+        // Obtener el archivo seleccionado
+        var file = this.files[0];
+
+        // Verificar si se seleccionó un archivo
+        if (file) {
+          // Crear un objeto de tipo FileReader
+          var reader = new FileReader();
+
+          // Configurar la función de devolución de llamada para cuando la lectura del archivo esté completa
+          reader.onload = function(e) {
+            // Mostrar la imagen seleccionada en el cuadro
+            document.getElementById('selectedImage').src = e.target.result;
+          };
+
+          // Leer el contenido del archivo como URL de datos
+          reader.readAsDataURL(file);
+        }
+      });

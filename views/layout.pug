@@ -12,12 +12,14 @@ html
     nav
       ul
         li
-          a(href='/') Inicio 
-        li
-          a(href='/login') Iniciar Sesion
-        li
-          a(href='/logout')
-            i(class='material-symbols-rounded') logout
+          a(href='/') Inicio
+        if isAuthenticated
+          li
+            a(href='/logout')
+              i(class='material-symbols-rounded') logout
+        else
+          li
+            a(href='/login') Iniciar Sesión
     
     block content
 
