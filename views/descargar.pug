@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Descargar Imagen
+  body
+    // Agrega una imagen que deseas descargar
+    img#myImage(src="ruta/de/tu/imagen.jpg", alt="Mi Imagen", style="display:none;")
+
+    // Agrega un botón para descargar la imagen
+    button(onclick="descargarImagen()") Descargar Imagen
+
+    script.
+      function descargarImagen() {
+        // Obtiene la URL de la imagen
+        var urlImagen = document.getElementById('myImage').src;
+
+        // Crea un elemento <a> temporal
+        var link = document.createElement('a');
+        link.href = urlImagen;
+        link.download = 'mi_imagen.jpg'; // Nombre de archivo para la descarga
+
+        // Simula el clic en el enlace para iniciar la descarga
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
