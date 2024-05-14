@@ -20,6 +20,9 @@ block content
           option(value="svg") SVG
           option(value="webp") WEBP
       button(type="submit") Convertir Imagen
+      .download-button
+      a#downloadButton(href="", download="nombre_de_archivo.jpg") Descargar Imagen
+
 
 
   script.
@@ -38,6 +41,9 @@ block content
           reader.onload = function(e) {
             // Mostrar la imagen seleccionada en el cuadro
             document.getElementById('selectedImage').src = e.target.result;
+            
+            // Asignar el enlace de descarga al botón de descarga
+            document.getElementById('downloadButton').href = e.target.result;
           };
 
           // Leer el contenido del archivo como URL de datos
@@ -45,3 +51,4 @@ block content
         }
   
       });
+    });
