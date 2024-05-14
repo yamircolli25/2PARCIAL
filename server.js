@@ -4,7 +4,7 @@ const path = require('path');
 const router = require('./routes/routes');
 const sharp = require('sharp');
 const multer = require('multer');
-const pool = require('./MySQL/conexion'); // Importa el pool de conexiones desde db.js
+const pool = require('./MYSQL/conexion'); // Importa el pool de conexiones desde db.js
 
 
 require('dotenv').config(); // Cargar las variables de entorno
@@ -85,7 +85,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 
 // Ruta para manejar la solicitud de registro de usuario
 app.post('/registrar-usuario', (req, res) => {
-    const { usuario, email, password } = req.body;
+    const { usuario, correo, password } = req.body;
   
     // Insertar usuario en la base de datos usando el pool de conexiones
     pool.getConnection((err, connection) => {
@@ -94,7 +94,7 @@ app.post('/registrar-usuario', (req, res) => {
         res.status(500).send('Error interno del servidor');
       } else {
         const query = 'INSERT INTO users (usuario, correo, contrasenia_hash) VALUES (?, ?, ?)';
-        connection.query(query, [usuario, email, password], (err, result) => {
+        connection.query(query, [usuario, correo, password], (err, result) => {
           connection.release(); // Liberar la conexión de vuelta al pool
   
           if (err) {
@@ -107,18 +107,6 @@ app.post('/registrar-usuario', (req, res) => {
         });
       }
     });
-  });
-
-  app.post('/login', (req, res) => {
-    // Verificar las credenciales del usuario (ejemplo simplificado)
-    const { usuario, contraseña } = req.body;
-    if (usuario === 'admin' && contraseña === 'admin') {
-      // Autenticación exitosa, establecer la sesión del usuario
-      req.session.isAuthenticated = true;
-      res.redirect('/');
-    } else {
-      res.status(401).send('Credenciales incorrectas');
-    }
   });
   
 
