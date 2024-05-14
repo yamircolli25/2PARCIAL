@@ -121,17 +121,17 @@ nav {
 
 /* Media query para dispositivos móviles */
 @media only screen and (max-width: 767px) {
-  nav {
-    flex-direction: column; /* Cambia la dirección del flexbox a columna */
-    padding: 10px 0; /* Aumenta el espacio de relleno */
-  }
+nav {
+  flex-direction: column; /* Cambia la dirección del flexbox a columna */
+  padding: 10px 0; /* Aumenta el espacio de relleno */
+}
 
-  nav ul {
-    margin: 10px 0; /* Aumenta el margen superior e inferior */
-  }
+nav ul {
+  margin: 10px 0; /* Aumenta el margen superior e inferior */
+}
 
-  nav ul li {
-    margin: 5px 0; /* Ajusta el margen entre elementos */
+nav ul li {
+  margin: 5px 0; /* Ajusta el margen entre elementos */
   }
 }
 nav ul li a {
