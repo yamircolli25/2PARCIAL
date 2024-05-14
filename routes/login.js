@@ -7,4 +7,5 @@ router.get('/', (req, res) => {
   res.render('login', { title: 'INICIAR SESIÓN'});
 });
 
+
 module.exports = router;
