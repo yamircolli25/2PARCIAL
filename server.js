@@ -38,6 +38,9 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+// Definir una variable global para el límite de conversiones
+const MAX_CONVERSIONS = 3;
+
 // Ruta para manejar la solicitud de conversión de imagen
 app.post('/upload', upload.single('image'), (req, res) => {
     // Verificar si se cargó una imagen
@@ -48,19 +51,36 @@ app.post('/upload', upload.single('image'), (req, res) => {
     // Obtener el formato seleccionado del cuerpo de la solicitud
     const format = req.body.format;
 
+    // Verificar el contador de conversiones en la sesión
+    req.session.conversionCount = req.session.conversionCount || 0;
+    if (req.session.conversionCount >= MAX_CONVERSIONS) {
+        // Redireccionar a la vista del login si se alcanza el límite
+        return res.redirect('/login');
+    }
+
+    // Incrementar el contador de conversiones
+    req.session.conversionCount++;
+
     // Procesar la imagen con Sharp
     sharp(req.file.path)
         .toFormat(format)
-        .toFile(path.join(__dirname, 'converted', `converted.${format}`), (err, info) => {
+        .toBuffer((err, buffer, info) => {
             if (err) {
                 console.error(err);
                 res.status(500).send('Error al procesar la imagen');
             } else {
-                // Renderizar la vista de imagen convertida
-                res.render('converted', { format });
+                // Definir los encabezados para la descarga
+                res.set({
+                    'Content-Type': `image/${format}`,
+                    'Content-Disposition': `attachment; filename="converted.${format}"`
+                });
+                // Enviar el buffer de la imagen como respuesta
+                res.send(buffer);
             }
         });
 });
+
+
 
 
 // Ruta para manejar la solicitud de registro de usuario

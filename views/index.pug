@@ -19,7 +19,8 @@ block content
           option(value="webp") WEBP
       button(type="submit") Convertir Imagen
 
-
+    .conversion-counter
+      | Conversiones restantes: #{3 - (conversionCount || 0)}
 
   script.
     document.addEventListener('DOMContentLoaded', function() {
