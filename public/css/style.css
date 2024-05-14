@@ -163,12 +163,17 @@ i{
 .login-form {
 border: 1px solid #010000;
 border-radius: 5px;
-padding: 17px;
-width: 300px;
+padding: 30px;
+width: 40%;
 position: absolute;
 top: 50% ;
 left: 50%;
 transform: translate(-50%,-50%);
+}
+@media(max-width:400px){
+  .login-form{
+    width: 90%;
+  }
 }
 
 .form-group {
@@ -277,14 +282,22 @@ background-color: #2c1304;
   align-self: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
-
-  
+}
+@media only screen and (max-width: 767px) {
+  .form-input{
+    width: 100%;
+  }
 }
 .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible {
   border: 1px solid #0a0909;
   outline-width: 1px;
   outline-style: solid;
   outline-color: #0c0b0b;
+}
+@media only screen and (max-width: 767px) {
+  .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible{
+    width: 100%;
+  }
 }
 
 .show-password-label {
