@@ -7,17 +7,15 @@ block content
         .icon
           i.fas.fa-cloud-upload-alt
         header  Arrastra y suelta para cargar tu archivo
-        span OR
         input(type="file", name="image", id="image", accept="image/*", required)
         label(for="image") Selecciona tu imagen <!-- Etiqueta asociada al input -->
-        img#selectedImage(src="", alt="Imagen seleccionada")
+        img#selectedImage(src="", alt="")
       .options
         label(for="format") Elija formato de la imagen:
         select(name="format", id="format")
           option(value="png") PNG
           option(value="jpg") JPG
           option(value="jpeg") JPEG
-          option(value="svg") SVG
           option(value="webp") WEBP
       button(type="submit") Convertir Imagen
 
