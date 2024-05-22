@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de imágenes</title>
+</head>
+<body>
+    <h1>Convertidor de imágenes</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <select name="format">
+            <option value="jpeg">JPEG</option>
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="tiff">TIFF</option>
+            <option value="webp">WEBP</option>
+            <option value="gif">GIF</option>
+            <option value="avif">AVIF</option>
+            <option value="raw">RAW</option>
+
+            <!-- Agrega más opciones si lo deseas -->
+        </select>
+        <button type="submit">Convertir</button>
+    </form>
+</body>
+</html>
